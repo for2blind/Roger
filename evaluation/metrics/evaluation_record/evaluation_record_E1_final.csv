@@ -1,0 +1,4 @@
+uuid,wrkname,scaling,scheduler,start_time,end_time,slo,collected,csv
+e4f92edf-9030-4a1b-9762-3eba2733ab69,inferline,none,dasheng,1711372954,1711374776,5,1,../metrics/wula/E1_9/inferline/dasheng/1711372954/
+a09e21e8-52c6-4dcf-9234-1e039d432eb8,cocktail,none,dasheng,1711383353,1711385175,5,1,../metrics/wula/E1_final/cocktail/dasheng/1711383353/
+ff9f667e-70de-471b-9290-acfd687a2e97,roger,none,dasheng,1711339976,1711341797,5,1,../metrics/wula/E1_final/roger/dasheng/1711339976/

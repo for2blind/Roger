@@ -1,0 +1,179 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://serverless.siat.ac.cn:31112
+
+functions:
+
+  mobilenet:
+    lang: python3-http-dl
+    namespace: cdgp
+    handler: ./mobilenet
+    image: k.harbor.siat.ac.cn/openfaas/mobilenet-11:1.0.3.shuffler
+    requests:
+      cpu: 500m
+    limits:
+      cpu: 1000m
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      infer_device: "cuda"
+
+  resnet-18:
+    lang: python3-http-dl
+    namespace: cdgp
+    handler: ./resnet-18
+    image: k.harbor.siat.ac.cn/openfaas/resnet-18:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+    limits:
+      cpu: 2000m
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      infer_device: "cuda"
+  
+  resnet-34:
+    lang: python3-http-dl
+    namespace: cdgp
+    handler: ./resnet-34
+    image: k.harbor.siat.ac.cn/openfaas/resnet-34:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+    limits:
+      cpu: 2000m
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      infer_device: "cuda"
+
+  resnet-50:
+    namespace: cdgp
+    lang: python3-http-dl
+    handler: ./resnet-50
+    image: k.harbor.siat.ac.cn/openfaas/resnet-50:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+      memory: 3Gi
+    limits:
+      cpu: 2000m
+      memory: 4Gi
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      debug: "false"
+      infer_device: "cuda"
+
+  resnet-101:
+    namespace: cdgp
+    lang: python3-http-dl
+    handler: ./resnet-101
+    image: k.harbor.siat.ac.cn/openfaas/resnet-101:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+      memory: 4Gi
+    limits:
+      cpu: 2000m
+      memory: 6Gi
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      debug: "false"
+      infer_device: "cuda"
+
+  resnet-152:
+    namespace: cdgp
+    lang: python3-http-dl
+    handler: ./resnet-152
+    image: k.harbor.siat.ac.cn/openfaas/resnet-152:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+      memory: 4Gi
+    limits:
+      cpu: 2000m
+      memory: 6Gi
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      debug: "false"
+      infer_device: "cuda"
+
+  vggnet-11:
+    namespace: cdgp
+    lang: python3-http-dl
+    handler: ./vggnet-11
+    image: k.harbor.siat.ac.cn/openfaas/vggnet-11:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+      memory: 3Gi
+    limits:
+      cpu: 2000m
+      memory: 4Gi
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      debug: "false"
+      infer_device: "cuda"
+
+
+  bert:
+    namespace: cdgp
+    lang: python3-http-dl
+    handler: ./bert
+    image: k.harbor.siat.ac.cn/openfaas/bert:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+      memory: 3Gi
+    limits:
+      cpu: 2000m
+      memory: 4Gi
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      debug: "false"
+      infer_device: "cuda"
+
+  bert-qa:
+    namespace: cdgp
+    lang: python3-http-dl
+    handler: ./bert-qa
+    image: k.harbor.siat.ac.cn/openfaas/bert-qa:1.0.3.shuffler
+    requests:
+      cpu: 1000m
+      memory: 3Gi
+    limits:
+      cpu: 2000m
+      memory: 4Gi
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      debug: "false"
+      infer_device: "cuda"
+
+  labse:
+    namespace: cdgp
+    lang: python3-http-dl
+    handler: ./labse
+    image: k.harbor.siat.ac.cn/openfaas/labse:1.0.4.shuffler
+    requests:
+      cpu: 1000m
+      memory: 4Gi
+    limits:
+      cpu: 2000m
+      memory: 6Gi
+    environment:
+      read_timeout: "5s"
+      write_timeout: "5s"
+      exec_timeout: "5s"
+      debug: "false"
+      infer_device: "cuda"
+

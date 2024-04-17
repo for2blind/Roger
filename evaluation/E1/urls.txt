@@ -1,0 +1,6 @@
+http://172.169.8.253:31112/function/opt-66b-submod-0-param-8.cdgp
+http://172.169.8.253:31112/function/bert-21b-submod-0-param-8.cdgp
+http://172.169.8.253:31112/function/llama-7b-submod-0-param-7.cdgp
+http://172.169.8.253:31112/function/bert-qa.cdgp
+http://172.169.8.253:31112/function/resnet-50.cdgp
+http://172.169.8.253:31112/function/resnet-152.cdgp

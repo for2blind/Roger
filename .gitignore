@@ -1,0 +1,9 @@
+**.pt
+**/build*/
+**/__pycache__
+*.py[cod]
+**/.vscode
+**.bz2
+**.xz
+**/build/
+**/Azure/**/*.csv

@@ -1,0 +1,5 @@
+
+[req]
+distinguished_name=req
+[SAN]
+subjectAltName=IP:172.16.101.223
